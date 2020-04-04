@@ -1,0 +1,189 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: rgba(184, 151, 149, 0.2);
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      #page {
+        position: relative;
+      }
+      li {
+        list-style: none;
+      }
+      a {
+        color: rgb(15, 4, 3);
+        text-decoration: none;
+      }
+
+      header {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        min-height: 75px;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: rgb(172, 131, 129);
+        z-index: 1;
+      }
+
+      #header-img {
+        width: 200px;
+        height: auto;
+        margin: 0;
+      }
+      nav {
+        font-family: cursive;
+        align-self: center;
+        font-size: 17px;
+      }
+
+      li {
+        display: inline;
+        margin: 10px;
+      }
+
+      main {
+        top: 10px;
+        margin-top: 60px;
+        position: absolute;
+      }
+      #email-sec {
+        text-align: center;
+        padding: 10px;
+        margin: 10px;
+      }
+      input {
+        width: 40%;
+        margin: 5px;
+        padding: 10px;
+      }
+      #video-sec {
+        width: 100%;
+        height: auto;
+        margin: auto;
+        text-align: center;
+      }
+      #video {
+        width: 70%;
+        margin: 10px;
+        padding: 20px;
+        background-color: rgba(110, 105, 105, 0.2);
+      }
+      #imgs-sec {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: auto;
+        width: 80%;
+      }
+
+      .lower-img {
+        width: 300px;
+        height: auto;
+        margin: 10px;
+      }
+
+      @media (max-width: 500px) {
+        header {
+          display: flex;
+          flex-direction: column;
+        }
+
+        #header-img {
+          width: auto;
+          height: auto;
+        }
+
+        main {
+          margin-top: 100px;
+          position: relative;
+          top: 50px;
+        }
+
+        #video-sec {
+          width: 100%;
+          height: auto;
+          margin: auto;
+          text-align: center;
+        }
+        #video {
+          width: 70%;
+          padding: 10px;
+          background-color: rgba(110, 105, 105, 0.2);
+        }
+
+        #imgs-sec {
+          align-items: center;
+          margin: auto;
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+        }
+
+        .lower-img {
+          width: 70%;
+          height: auto;
+          margin: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="page">
+      <header id="header" class="header">
+        <img src="bakersandbuff.png" alt="icon" id="header-img" />
+        <nav id="nav-bar">
+          <ul class="nav-ul">
+            <li>
+              <a href="#email-sec" class="nav-link">first click </a>
+            </li>
+            <li><a href="#video-sec" class="nav-link">second click</a></li>
+            <li><a href="#imgs-sec" class="nav-link">third click</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <div class="container">
+          <div id="email-sec">
+            <p>Enter your email address</p>
+            <form
+              action="https://www.freecodecamp.com/email-submit"
+              id="form"
+              method="GET"
+              target="_blank"
+            >
+              <input type="email" id="email" placeholder="#email" /><br />
+              <input type="submit" id="submit" value="submit" />
+            </form>
+          </div>
+          <div id="video-sec">
+            <video width="70%" height="auto" controls id="video">
+              <source
+                src="30Sec motivational Status Video - A Short Motivational story fo whatsapp.mp4"
+                type="video/mp4"
+              />
+            </video>
+          </div>
+          <div id="imgs-sec">
+            <img src="bur1.jpg" alt="img" class="lower-img" />
+            <img src="bur2.jpg" alt="img" class="lower-img" />
+            <img src="bur3.jpg" alt="img" class="lower-img" />
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
